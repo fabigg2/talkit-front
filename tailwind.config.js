@@ -32,6 +32,11 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    colors:{
+      'blur-form': "rgba(37, 37, 37, 0.19)",
+      'black': "#000000",
+      'white': "#ffffff"
+    }
   },
   plugins: [require("tailwindcss-animate")],
 }
