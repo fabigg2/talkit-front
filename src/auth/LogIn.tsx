@@ -1,8 +1,8 @@
-import { Lock, Mail, MessageCircle } from "lucide-react";
+import { CloudUploadIcon, Lock, LogInIcon, Mail, MessageCircle } from "lucide-react";
 import "./styles/index.scss";
 import logo from "../assets/login/login-icon.png";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Button } from "@mui/material";
 const LogIn = () => {
   return (
     <div
@@ -17,19 +17,25 @@ const LogIn = () => {
         </div>
         <div className=" relative w-5/6">
           <Mail color="#ffffff" className="fixed mt-2 ml-2 rounded-xl" />
-          <Input  className=" bg-black opacity-50 rounded-xl text-[#ffffff] pl-10"/>
+          <Input className=" bg-black opacity-50 rounded-xl text-[#ffffff] pl-10" />
         </div>
-        <div  className=" relative w-5/6">
-          <Lock color="#ffffff" className="fixed mt-2 ml-2 rounded-xl"/>
-          <Input className=" bg-black opacity-50 rounded-xl text-[#ffffff] pl-10"/>
+        <div className=" relative w-5/6">
+          <Lock color="#ffffff" className="fixed mt-2 ml-2 rounded-xl" />
+          <Input className=" bg-black opacity-50 rounded-xl text-[#ffffff] pl-10" />
         </div>
-        <div className="flex flex-row">
-          <div className=" border-white rounded-xl overflow-hidden">
-            <Button>Iniciar session</Button>
-          </div>
-          <div>
-            <Button>Crear cuenta</Button>
-          </div>
+        <div className="flex flex-row flex-">
+          <Button variant="outlined" color="primary" startIcon={<LogInIcon />}>Iniciar session</Button>
+
+          <Button
+            component="label"
+            role={undefined}
+            variant="contained"
+            tabIndex={-1}
+            color="error"
+            
+          >
+             Clrear cuenta
+          </Button>
         </div>
         <p>Olvide mi contraseña</p>
         <div>Ingresar con google</div>
